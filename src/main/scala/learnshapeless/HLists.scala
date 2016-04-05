@@ -121,4 +121,11 @@ object HLists extends App {
     ex_newton.updateAtWith(0)(Data.scientistsFirstNames.getOrElse(_, "Unknown"))
   println(s"ex_to_firstname_by_index $ex_to_firstname_by_index")
 
+  ex_newton match {
+    case matched @ ("Newton" :: year :: country) =>
+      println(s"Matched!!! $matched")
+    case mismatched =>
+      println(s"Failure to match $ex_to_firstname_by_index")
+  }
+
 }
