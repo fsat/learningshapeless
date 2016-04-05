@@ -46,8 +46,8 @@ object TypeEquality extends App {
   def eg_IntConformsToInt = implicitly[Int <:< Int]
   def eg_IntConformsToAny = implicitly[Int <:< Any]
 
-  def eg_CovarainceFunctionOutput = implicitly[(Int => Int) <:< (Int => Any)]
-  def eg_ContravarainceFunctionInput = implicitly[(Any => Int) <:< (Int => Int)]
+  def eg_CovarianceFunctionOutput = implicitly[(Int => Int) <:< (Int => Any)]
+  def eg_ContravarianceFunctionInput = implicitly[(Any => Int) <:< (Int => Int)]
 
   def ex_assertConformsToTypeOf[A, Super](value: A) = ???
 
