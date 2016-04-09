@@ -40,7 +40,7 @@ object HLists extends App {
   def eg_prependAndAppend: String :: String :: Int :: Country :: Discovery :: HNil = "Albert" +: eg1_einstein :+ TheoryOfRelativity
 
   /* Exercise : Prepend the String "Isaac" to `ex_newton` and append `Calculus` */
-  def ex_prependAndAppend = ???
+  def ex_prependAndAppend = "Isaac" :: ex_newton :: "Calculus" :: HNil
   println(s"ex_prependAndAppend $ex_prependAndAppend")
 
   /* Exercise 3: Prepend the String "Isaac" to `ex_newton` */
@@ -56,7 +56,8 @@ object HLists extends App {
   println(s"ex_tuple $ex_tuple")
 
   /* Using operations available via `import syntax.std.tuple._`, append `Calculus` to `ex_tuple`  */
-  def ex_tuple_append = ???
+  import syntax.std.tuple._
+  def ex_tuple_append = ex_tuple :: "Calculus" :: HNil
   println(s"ex_tuple_append $ex_tuple_append")
 
   def eg_from_tuple = ("Einstein", 1879, Germany).productElements
